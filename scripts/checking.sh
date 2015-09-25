@@ -35,7 +35,8 @@ cp -v "app/build/outputs/lint-results.xml" "$LINT_RESULT_DIR/"
 
 if [ -z "${CI_PULL_REQUEST}" ]; then
     # when not pull request
-    REPORTER=Saddler::Reporter::Github::CommitReviewComment
+    # REPORTER=Saddler::Reporter::Github::CommitReviewComment
+    exit 0
 else
     REPORTER=Saddler::Reporter::Github::PullRequestReviewComment
 fi
