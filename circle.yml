@@ -1,3 +1,5 @@
+general:
+  build_dir: BaseProject
 machine:
  environment:
    JAVA_OPTS: "-Xmx4156m -XX:MaxPermSize=2048m"
