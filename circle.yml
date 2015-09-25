@@ -6,4 +6,4 @@ machine:
  timezone: Asia/Saigon
 test:
  override:
-   - scripts/checking.sh
+   - ../scripts/checking.sh
