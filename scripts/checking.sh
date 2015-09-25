@@ -46,14 +46,14 @@ cd ../
 echo "********************"
 echo "* checkstyle       *"
 echo "********************"
-cat CDB/app/build/reports/checkstyle/checkstyle.xml \
+cat BaseProject/app/build/reports/checkstyle/checkstyle.xml \
     | checkstyle_filter-git diff origin/master \
     | saddler report --require saddler/reporter/github --reporter $REPORTER
 
 echo "********************"
 echo "* findbugs         *"
 echo "********************"
-cat CDB/app/build/reports/findbugs/findbugs.xml \
+cat BaseProject/app/build/reports/findbugs/findbugs.xml \
     | findbugs_translate_checkstyle_format translate \
     | checkstyle_filter-git diff origin/master \
     | saddler report --require saddler/reporter/github --reporter $REPORTER
@@ -61,7 +61,7 @@ cat CDB/app/build/reports/findbugs/findbugs.xml \
 echo "********************"
 echo "* PMD              *"
 echo "********************"
-cat CDB/app/build/reports/pmd/pmd.xml \
+cat BaseProject/app/build/reports/pmd/pmd.xml \
     | pmd_translate_checkstyle_format translate \
     | checkstyle_filter-git diff origin/master \
     | saddler report --require saddler/reporter/github --reporter $REPORTER
@@ -69,7 +69,7 @@ cat CDB/app/build/reports/pmd/pmd.xml \
 echo "********************"
 echo "* PMD-CPD          *"
 echo "********************"
-cat CDB/app/build/reports/pmd/cpd.xml \
+cat BaseProject/app/build/reports/pmd/cpd.xml \
     | pmd_translate_checkstyle_format translate --cpd-translate \
     | checkstyle_filter-git diff origin/master \
     | saddler report --require saddler/reporter/github --reporter $REPORTER
@@ -77,7 +77,7 @@ cat CDB/app/build/reports/pmd/cpd.xml \
 echo "********************"
 echo "* android lint     *"
 echo "********************"
-cat CDB/app/build/outputs/lint-results.xml \
+cat BaseProject/app/build/outputs/lint-results.xml \
     | android_lint_translate_checkstyle_format translate \
     | checkstyle_filter-git diff origin/master \
     | saddler report --require saddler/reporter/github --reporter $REPORTER
