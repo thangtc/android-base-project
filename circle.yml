@@ -4,4 +4,4 @@ machine:
  timezone: Asia/Saigon
 test:
  override:
-   - ../BaseProject/scripts/checking.sh
+   - ../scripts/checking.sh
