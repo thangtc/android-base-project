@@ -1,3 +1,7 @@
+machine:
+ environment:
+   JAVA_OPTS: "-Xmx4156m -XX:MaxPermSize=2048m"
+ timezone: Asia/Saigon
 test:
-  override:
-    - ./scripts/checking.sh
+ override:
+   - scripts/checking.sh
