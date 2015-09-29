@@ -1,15 +1,22 @@
 package tct.com.baseproject;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
+    String thang;
+    String circleCI   ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(TextUtils.equals(thang,""))
+            thang= "thang";
+        Log.d("Landebug","thang ga qua");
         setContentView(R.layout.activity_main);
     }
 
