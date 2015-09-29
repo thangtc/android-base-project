@@ -61,10 +61,10 @@ cat BaseProject/app/build/reports/findbugs/findbugs.xml \
 echo "********************"
 echo "* PMD              *"
 echo "********************"
-#cat BaseProject/app/build/reports/pmd/pmd.xml \
-#    | pmd_translate_checkstyle_format translate \
-#    | checkstyle_filter-git diff origin/master \
-#    | saddler report --require saddler/reporter/github --reporter $REPORTER
+cat BaseProject/app/build/reports/pmd/pmd.xml \
+    | pmd_translate_checkstyle_format translate \
+    | checkstyle_filter-git diff origin/master \
+    | saddler report --require saddler/reporter/github --reporter $REPORTER
 
 echo "********************"
 echo "* PMD-CPD          *"
