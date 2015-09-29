@@ -69,10 +69,10 @@ cat BaseProject/app/build/reports/pmd/pmd.xml \
 echo "********************"
 echo "* PMD-CPD          *"
 echo "********************"
-#cat BaseProject/app/build/reports/pmd/cpd.xml \
-#    | pmd_translate_checkstyle_format translate --cpd-translate \
-#    | checkstyle_filter-git diff origin/master \
-#    | saddler report --require saddler/reporter/github --reporter $REPORTER
+cat BaseProject/app/build/reports/pmd/cpd.xml \
+    | pmd_translate_checkstyle_format translate --cpd-translate \
+    | checkstyle_filter-git diff origin/master \
+    | saddler report --require saddler/reporter/github --reporter $REPORTER
 
 echo "********************"
 echo "* android lint     *"
