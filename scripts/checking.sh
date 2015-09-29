@@ -77,7 +77,7 @@ cat BaseProject/app/build/reports/pmd/cpd.xml \
 echo "********************"
 echo "* android lint     *"
 echo "********************"
-#cat BaseProject/app/build/outputs/lint-results.xml \
-#    | android_lint_translate_checkstyle_format translate \
-#    | checkstyle_filter-git diff origin/master \
-#    | saddler report --require saddler/reporter/github --reporter $REPORTER
+cat BaseProject/app/build/outputs/lint-results.xml \
+    | android_lint_translate_checkstyle_format translate \
+    | checkstyle_filter-git diff origin/master \
+    | saddler report --require saddler/reporter/github --reporter $REPORTER
