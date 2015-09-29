@@ -54,31 +54,31 @@ cat BaseProject/app/build/reports/checkstyle/checkstyle.xml \
 echo "********************"
 echo "* findbugs         *"
 echo "********************"
-cat BaseProject/app/build/reports/findbugs/findbugs.xml \
-    | findbugs_translate_checkstyle_format translate \
-    | checkstyle_filter-git diff origin/master \
-    | saddler report --require saddler/reporter/github --reporter $REPORTER
+#cat BaseProject/app/build/reports/findbugs/findbugs.xml \
+#    | findbugs_translate_checkstyle_format translate \
+#    | checkstyle_filter-git diff origin/master \
+#    | saddler report --require saddler/reporter/github --reporter $REPORTER
 
 echo "********************"
 echo "* PMD              *"
 echo "********************"
-cat BaseProject/app/build/reports/pmd/pmd.xml \
-    | pmd_translate_checkstyle_format translate \
-    | checkstyle_filter-git diff origin/master \
-    | saddler report --require saddler/reporter/github --reporter $REPORTER
+#cat BaseProject/app/build/reports/pmd/pmd.xml \
+#    | pmd_translate_checkstyle_format translate \
+#    | checkstyle_filter-git diff origin/master \
+#    | saddler report --require saddler/reporter/github --reporter $REPORTER
 
 echo "********************"
 echo "* PMD-CPD          *"
 echo "********************"
-cat BaseProject/app/build/reports/pmd/cpd.xml \
-    | pmd_translate_checkstyle_format translate --cpd-translate \
-    | checkstyle_filter-git diff origin/master \
-    | saddler report --require saddler/reporter/github --reporter $REPORTER
+#cat BaseProject/app/build/reports/pmd/cpd.xml \
+#    | pmd_translate_checkstyle_format translate --cpd-translate \
+#    | checkstyle_filter-git diff origin/master \
+#    | saddler report --require saddler/reporter/github --reporter $REPORTER
 
 echo "********************"
 echo "* android lint     *"
 echo "********************"
-cat BaseProject/app/build/outputs/lint-results.xml \
-    | android_lint_translate_checkstyle_format translate \
-    | checkstyle_filter-git diff origin/master \
-    | saddler report --require saddler/reporter/github --reporter $REPORTER
+#cat BaseProject/app/build/outputs/lint-results.xml \
+#    | android_lint_translate_checkstyle_format translate \
+#    | checkstyle_filter-git diff origin/master \
+#    | saddler report --require saddler/reporter/github --reporter $REPORTER
