@@ -3,18 +3,12 @@
 echo "********************"
 echo "* install gems     *"
 echo "********************"
-gem install --no-document checkstyle_filter-git saddler saddler-reporter-github findbugs_translate_checkstyle_format android_lint_translate_checkstyle_format pmd_translate_checkstyle_format octokit
+gem install --no-document checkstyle_filter-git saddler saddler-reporter-github findbugs_translate_checkstyle_format android_lint_translate_checkstyle_format pmd_translate_checkstyle_format
 
 if [ $? -ne 0 ]; then
     echo 'Failed to install gems.'
     exit 1
 fi
-
-# Provide authentication credentials
-echo "Fetch the current user"
-client = Octokit::Client.new(:login => 'LanAsiantech', :password => '12693670')
-# Fetch the current user
-client.user
 
 echo "********************"
 echo "* exec gradle      *"
